@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 /**
  * _strcpy - Copies a string pointed to by @src, including the
@@ -12,6 +13,9 @@ char *_strcpy(char *dest, char *src)
 	char *aux = dest;
 
 	while (*src)
+	{
 		*dest++ = *src++;
+	}
+	*dest = '\0';
 	return (aux);
 }
