@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _strstr -  a function that locates a substring.
  * @haystack: an input string to search in
@@ -9,21 +9,20 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *startn = needle, *starth = haystack;
-
-	while (*haystack)
+	for (; *haystack != '\0'; haystack++)
 	{
-		starth = haystack;
-		needle = startn;
-		while (*haystack == *needle)
-		{
-			haystack++;
-			needle++;
-		}
+	char *l = haystack;
+	char *p = needle;
 
-		if (*needle == '\0')
-			return (haystack);
-		haystack = starth + 1;
+	while (*l == *p && *p != '\0')
+	{
+		l++;
+		p++;
 	}
-	return ('\0');
+
+	if (*p == '\0')
+	return (haystack);
+	}
+
+	return (0);
 }
