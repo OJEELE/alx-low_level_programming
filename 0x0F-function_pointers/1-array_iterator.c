@@ -2,12 +2,14 @@
 #include "function_pointers.h"
 
 /**
- * array_ iterator - prints each array element in a new line
- * @array: array
- * @size: number of elements in the array to print
- * action: pointer to print in regular or hex
- * Return: always0 successful execution
+ * array_iterator -  a function that executes a function given as
+ * a parameter on each element of an array.
+ * @array: A pointer to array
+ * @size: Size of the array
+ * @action: action(function) to iterate throw array
+ * Return: Nothing
  */
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
