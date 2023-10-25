@@ -10,11 +10,13 @@
 int _pow_recursion(int x, int y)
 {
 	int result = 1;
+	int i;
+
 	if(y < 0)
 	{
 		return (-1);
 	}
-	for (y; y > 0; y--)
+	for (i = 0; i < y; y++)
 	{
 		result = result * x;
 	}
