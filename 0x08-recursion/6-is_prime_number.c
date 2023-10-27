@@ -22,7 +22,7 @@ int is_divisable(int n, int divisor)
 int  is_prime_number(int n)
 {
 	int divisor = 2;
-	
+
 	if (n <= 1)
 		return (0);
 	if (n <= 3)
