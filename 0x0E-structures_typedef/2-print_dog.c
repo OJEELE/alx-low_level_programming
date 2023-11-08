@@ -3,16 +3,16 @@
 /**
  * print_dog - function prints struct dog
  * @d: element of struct dog to be printed
- * Return: returns 0 success
+ * Return: returns nothing
  */
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
 		return;
 	if (d->name == NULL)
-		d->name = ("nil");
+		d->name = "(nil)";
 	if (d->owner == NULL)
-		d->owner = ("nil");
+		d->owner = "(nil)";
 
 	printf("Name: %s \nAge: %0.6f \nOwner: %s\n", d->name, d->age, d->owner);
-}	
+}
