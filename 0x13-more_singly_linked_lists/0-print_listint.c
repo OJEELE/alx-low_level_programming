@@ -2,9 +2,7 @@
 
 /**
  * print_listint - function prints elements of the list
- * @h: integer 
- *
- *
+ * @h: pointer to the head of the linked list
  * Return: number of nodes
  */
 size_t print_listint(const listint_t *h)
@@ -13,8 +11,7 @@ size_t print_listint(const listint_t *h)
 
 	if (h == NULL)
 		return (1);
-	
-	while(h != NULL)
+	while (h != NULL)
 	{
 		printf("%d\n", h->n);
 	h = h->next;
