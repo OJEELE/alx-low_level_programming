@@ -1,8 +1,9 @@
 #include "lists.h"
 /**
- * ppo_listint - function deletes node of linked list
- * *head: pointer to head of the linked list
- * Return: returns 1 success or 0 failed
+ * pop_listint - A function that deletes the head node of a list
+ * and returns the head node's data n.
+ * @head: A pointer to listint_t structure.
+ * Return: The head node's datafrom deleted element
  */
 int pop_listint(listint_t **head)
 {
