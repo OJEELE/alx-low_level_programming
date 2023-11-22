@@ -2,7 +2,7 @@
 /**
  * insert_nodeint_at_index - function inserts a new node at given position
  *@head: linked list head
- * @idx: index of the list to add new node
+ * @index: index of the list to add new node
  * @n: integer
  * Return: address of the new node or NULL if failed
  */
