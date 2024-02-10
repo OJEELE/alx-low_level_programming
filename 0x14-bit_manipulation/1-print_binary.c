@@ -1,10 +1,11 @@
 #include "main.h"
 
 /**
- * print_binary- Function prints binary numbers.
- * @n: integer to be printedin binary
+ * print_binary- Function that  prints binary numbers.
+ * @n: number to be printed in binary
  * Return: nothing
  */
+
 void print_binary(unsigned long int n)
 {
 	unsigned int flag = 0, max = 32768;
