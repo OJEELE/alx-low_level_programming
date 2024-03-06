@@ -1,29 +1,48 @@
 #include "main.h"
 
 /**
- * print_binary- Function that  prints binary numbers.
- * @n: number to be printed in binary
- * Return: nothing
+ * _pow - calculates (base ^ power)
+ * @base: base of the exponent
+ * @power: power of the exponent
+ *
+ * Return: value of (base ^ power)
  */
+unsigned long int _pow(unsigned int base, unsigned int power)
+{
+	unsigned long int num;
+	unsigned int i;
 
+	num = 1;
+	for (i = 1; i <= power; i++)
+		num *= base;
+	return (num);
+}
+
+/**
+ * print_binary - prints a number in binary notation
+ * @n: number to print
+ *
+ * Return: void
+ */
 void print_binary(unsigned long int n)
 {
-	unsigned int flag = 0, max = 32768;
+	unsigned long int divisor, check;
+	char flag;
 
-	if (n == 0)
+	flag = 0;
+	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (divisor != 0)
 	{
-		_putchar('0');
-		return;
-	}
-	while (max)
-	{
-		if (flag == 1 && (n & max) == 0)
-			_putchar('0');
-		else if ((n & max) != 0)
+		check = n & divisor;
+		if (check == divisor)
 		{
-			_putchar('1');
 			flag = 1;
+			_putchar('1');
 		}
-		max >>= 1;
+		else if (flag == 1 || divisor == 1)
+		{
+			_putchar('0');
+		}
+		divisor >>= 1;
 	}
 }
